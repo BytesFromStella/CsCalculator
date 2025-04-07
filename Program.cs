@@ -28,13 +28,20 @@ public class Program {
             case "/":
                 if (num2 == 0) {
                     output += "You can't divide by zero, dumb dumb!";
+                    break;
                 } else {
                     output += (num1 / num2).ToString();
+                    break;
                 }
-                break;
             case "%":
-                output += (num1 % num2).ToString();
-                break;
+                if (num2 == 0) {
+                    output += "You can't modulo by zero, dumb dumb!";
+                    break;
+                } else {
+                    output += (num1 % num2).ToString();
+                    break;
+                }
+                
             default:
                 output += "Huh?";
                 break;
